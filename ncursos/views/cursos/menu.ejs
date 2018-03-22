@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Cadastro de Cursos - Menu de Opções</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body class="text-center">
+    <div class="starter-template">
+        <p>Bem-vindo,
+            <%- usuario.nome %>
+        </p>
+        <h1>Menu de Opções</h1>
+        <h4>Escolha sua opção</h4>
+    </div>
+    <section>
+        <a class="btn" href="/cadCurso">Cadastro de Cursos</a>
+        <br/>
+        <a class="btn" href="/listaCursos">Lista de Cursos</a>
+    </section>
+    <section>
+        <a class="btn" href='/logout'>Logout</a>
+    </section>
+    <footer class="footer">
+        <small>Sistema de Cadastro de Cursos</small>
+    </footer>
+</body>
+
+</html>
