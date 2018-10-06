@@ -7,10 +7,12 @@ var expressSession = require('express-session');
 
 var error = require('./middlewares/error');
 
+var port = process.env.PORT || 3000;
+
 app = express();
 
 var mongoose = require('mongoose');
-global.db = mongoose.connect('mongodb://localhost:27017/ncursos');
+global.db = mongoose.connect('mongodb://admin:admin1@ds151078.mlab.com:51078/ncursos');
 mongoose.connection.on('connected', function () {
   console.log('=====Conexão estabelecida com sucesso=====');
 });
@@ -39,6 +41,6 @@ load('models')
 app.use(error.notFound);
 app.use(error.serverError);
 
-app.listen(3000, function () {
+app.listen(port, function () {
   console.log("Aplicação no ar.");
 });
