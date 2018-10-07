@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Cadastro de Cursos - Cadastro</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body class="text-center">
+    <div class="starter-template">
+        <p>Bem-vindo,
+            <%- usuario.nome %>
+        </p>
+        <h1>Cadastro de Cursos</h1>
+        <h4>Forneça os dados para o cadastro</h4>
+    </div>
+    <section>
+        <form class="container" action="/novoCurso" method="post">
+            Código:
+            <br />
+            <input class="form-control" type="number" name="curso[codigo]" placeholder="Código">
+            <br> Descrição:
+            <br />
+            <input class="form-control" type="text" name="curso[descricao]" placeholder="Descrição">
+            <br> CH:
+            <br />
+            <input class="form-control" type="number" name="curso[ch]" placeholder="Carga horária">
+
+            <br> Categoria:
+            <br />
+            <select class="selectpicker form-control" name="curso[categoria]">
+                <option value="MBA">MBA</option>
+                <option value="Graduação">Graduação</option>
+                <option value="Extensão">Extensão</option>
+                <option value="Tecnólogo">Tecnólogo</option>
+            </select>
+            <br>
+            <br>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Enviar</button>
+            <br/>
+            <a class="btn btn-small btn-primary btn-block" href='/menu'>Voltar</a>
+        </form>
+    </section>
+    <footer class="footer">
+        <small>Sistema de Cadastro de Cursos</small>
+    </footer>
+</body>
+
+</html>
